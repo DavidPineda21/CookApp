@@ -1,33 +1,40 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>AnadirReceta</ion-title>
+    <img src="assets/atras.svg"> 
+    <ion-icon src="assets/logo.svg"></ion-icon> 
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content [fullscreen]="true">
+  <img [fullscreen]="true" src="assets/fondo.svg"/>
   <ion-tabs>
     <ion-tab-bar slot="bottom">
-      <ion-tab-button tab="schedule">
-        <ion-icon name="calendar"></ion-icon>
-        <ion-label>Schedule</ion-label>
-        <ion-badge>6</ion-badge>
-      </ion-tab-button>
-  
+
       <ion-tab-button tab="speakers">
-        <ion-icon name="person-circle"></ion-icon>
-        <ion-label>Speakers</ion-label>
+        <ion-icon src="assets/inicio.svg"></ion-icon>
+        <ion-label [routerlink]="['/home']">Inicio</ion-label>
       </ion-tab-button>
-  
-      <ion-tab-button tab="map">
-        <ion-icon name="map"></ion-icon>
-        <ion-label>Map</ion-label>
+
+      <ion-tab-button tab="speakers">
+        <ion-icon src="assets/buscar.svg"></ion-icon>
+        <ion-label>Buscar</ion-label>
       </ion-tab-button>
-  
-      <ion-tab-button tab="about">
-        <ion-icon name="information-circle"></ion-icon>
-        <ion-label>About</ion-label>
+
+      <ion-tab-button tab="speakers">
+        <ion-icon src="assets/anadir.svg"></ion-icon>
+        <ion-label >Añadir</ion-label>
       </ion-tab-button>
+
+      <ion-tab-button tab="speakers">
+        <ion-icon src="assets/lista.svg"></ion-icon>
+        <ion-label>Lista</ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button tab="speakers">
+        <ion-icon src="assets/cuenta.svg"></ion-icon>
+        <ion-label>Cuenta</ion-label>
+      </ion-tab-button>
+
     </ion-tab-bar>
   </ion-tabs>
-
 </ion-content>
