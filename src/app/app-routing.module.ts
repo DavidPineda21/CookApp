@@ -11,6 +11,10 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'iniciar',
+    loadChildren: () => import('./iniciar/iniciar.module').then( m => m.IniciarPageModule)
+  },
 ];
 
 @NgModule({
