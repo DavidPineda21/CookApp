@@ -20,6 +20,10 @@ const routes: Routes = [
     path: 'iniciar',
     loadChildren: () => import('./iniciar/iniciar.module').then( m => m.IniciarPageModule)
   },
+  {
+    path: 'iniciar-sesion',
+    loadChildren: () => import('./iniciar-sesion/iniciar-sesion.module').then( m => m.IniciarSesionPageModule)
+  },
 ];
 >>>>>>> 8e04596619700dd65f57226b03d0885a30ff5bef
 
