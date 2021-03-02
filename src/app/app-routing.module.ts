@@ -14,6 +14,14 @@ const routes: Routes = [
     path: 'anadir-receta',
     loadChildren: () => import('./anadir-receta/anadir-receta.module').then( m => m.AnadirRecetaPageModule)
   },
+<<<<<<< HEAD
+=======
+  {
+    path: 'iniciar',
+    loadChildren: () => import('./iniciar/iniciar.module').then( m => m.IniciarPageModule)
+  },
+];
+>>>>>>> 8e04596619700dd65f57226b03d0885a30ff5bef
 
 ];
 
