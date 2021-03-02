@@ -10,7 +10,11 @@ const routes: Routes = [
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
+  },  {
+    path: 'anadir-receta',
+    loadChildren: () => import('./anadir-receta/anadir-receta.module').then( m => m.AnadirRecetaPageModule)
   },
+
 ];
 
 @NgModule({
