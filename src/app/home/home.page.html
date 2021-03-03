@@ -1,8 +1,7 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+    <img src="assets/atras.svg"> 
+    <ion-icon src="assets/logo.svg"></ion-icon> 
   </ion-toolbar>
 </ion-header>
 
@@ -11,27 +10,17 @@
   <ion-tabs>
     <ion-tab-bar slot="bottom">
 
-      <ion-tab-button tab="speakers">
+      <ion-tab-button [routerLink]="['/home']"tab="speakers">
         <ion-icon src="assets/inicio.svg"></ion-icon>
         <ion-label>Inicio</ion-label>
       </ion-tab-button>
 
-      <ion-tab-button tab="speakers">
+      <ion-tab-button [routerLink]="['/buscar']"tab="speakers">
         <ion-icon src="assets/buscar.svg"></ion-icon>
         <ion-label>Buscar</ion-label>
       </ion-tab-button>
 
-      <ion-tab-button tab="speakers">
-        <ion-icon src="assets/anadir.svg"></ion-icon>
-        <ion-label [routerLink]="['/anadir-receta']">Añadir</ion-label>
-      </ion-tab-button>
-
-      <ion-tab-button tab="speakers">
-        <ion-icon src="assets/lista.svg"></ion-icon>
-        <ion-label>Lista</ion-label>
-      </ion-tab-button>
-
-      <ion-tab-button tab="speakers">
+      <ion-tab-button [routerLink]="['/cuenta']"tab="speakers">
         <ion-icon src="assets/cuenta.svg"></ion-icon>
         <ion-label>Cuenta</ion-label>
       </ion-tab-button>
