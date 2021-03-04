@@ -19,15 +19,23 @@ const routes: Routes = [
         ] 
       },
 
+      {
+        path: 'cuenta',
+        children:[
+          {
+            path:'',
+            loadChildren:() => import('../cuenta/cuenta.module').then(m=> m.CuentaPageModule)
+          }
+
+        ] 
+      },
+
       
       {
         path:'',
         redirectTo:'/tabs/anadir-receta',
         pathMatch:'full'
       },
-
-
-       
 
     ]
   },
@@ -40,6 +48,6 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule],
+  exports: [RouterModule]
 })
 export class TabMenuRoutingModule {}
