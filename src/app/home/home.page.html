@@ -6,25 +6,16 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+      <ion-card-title>Card Title</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      Keep close to Nature's heart... and break clear away, once in awhile,
+      and climb a mountain or spend a week in the woods. Wash your spirit clean.
+    </ion-card-content>
+  </ion-card>
   <img [fullscreen]="true" src="assets/fondo.svg"/>
-  <ion-tabs>
-    <ion-tab-bar slot="bottom">
-
-      <ion-tab-button [routerLink]="['/home']"tab="speakers">
-        <ion-icon src="assets/inicio.svg"></ion-icon>
-        <ion-label>Inicio</ion-label>
-      </ion-tab-button>
-
-      <ion-tab-button [routerLink]="['/buscar']"tab="speakers">
-        <ion-icon src="assets/buscar.svg"></ion-icon>
-        <ion-label>Buscar</ion-label>
-      </ion-tab-button>
-
-      <ion-tab-button [routerLink]="['/cuenta']"tab="speakers">
-        <ion-icon src="assets/cuenta.svg"></ion-icon>
-        <ion-label>Cuenta</ion-label>
-      </ion-tab-button>
-
-    </ion-tab-bar>
-  </ion-tabs>
 </ion-content>
