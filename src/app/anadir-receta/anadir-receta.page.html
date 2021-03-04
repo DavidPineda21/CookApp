@@ -1,7 +1,9 @@
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 <ion-header>
   <ion-toolbar>
     <img src="assets/atras.svg"> 
-    <ion-icon src="assets/logo.svg"></ion-icon> 
+    <img class="logo" src="assets/logo.svg">
     <ion-buttons slot="end">
       <ion-button expand="block" shape="round" >Guardar
       </ion-button>
@@ -10,70 +12,50 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-
-
-  <form id="form">
-
-    <ion-item>
-      <ion-label position="stacked" >
-        <ion-icon src="assets/agg_img_plato.svg"></ion-icon>
-      </ion-label >
-      
-    </ion-item>
-
-    <ion-item>
-      <ion-label position="stacked">Título
-      </ion-label>
-      <ion-input placeholder="placeholder"></ion-input>
-    </ion-item>
-
-    <ion-item>
-      <ion-label position="stacked">Ingredientes 
-      </ion-label>
-      <ion-textarea placeholder="placeholder"></ion-textarea>
-    </ion-item>
-
-    <ion-item>
-      <ion-label position="stacked">Proceso 
-      </ion-label>
-      <ion-textarea placeholder="placeholder"></ion-textarea>
-    </ion-item>
-
-    <ion-item>
-      <ion-label>Tiempo de ejecución: </ion-label>
-      <ion-input placeholder="placeholder" type="text"></ion-input>
-    </ion-item>
+  <ion-list lines="full" class="ion-no-margin">
+    <form id="form">
     
-  </form>
+      <ion-item class="cajon_img">
+        <ion-label class="label_img"  >
+          <ion-img class="fcamara" src="assets/agg_img_plato.svg"></ion-img>
+          <ion-img class="camara" src="assets/camara.svg"></ion-img>
+        </ion-label >
+        
+      </ion-item>
   
-  <ion-tabs>
-    <ion-tab-bar slot="bottom">
-
-      <ion-tab-button [routerLink]="['/home']" tab="speakers" >
-        <ion-icon  src="assets/inicio.svg" ></ion-icon>
-        <ion-label>Inicio</ion-label>
-      </ion-tab-button>
-
-      <ion-tab-button tab="speakers">
-        <ion-icon src="assets/buscar.svg"></ion-icon>
-        <ion-label>Buscar</ion-label>
-      </ion-tab-button>
-
-      <ion-tab-button tab="speakers">
-        <ion-icon src="assets/anadir.svg"></ion-icon>
-        <ion-label >Añadir</ion-label>
-      </ion-tab-button>
-
-      <ion-tab-button tab="speakers">
-        <ion-icon src="assets/lista.svg"></ion-icon>
-        <ion-label>Lista</ion-label>
-      </ion-tab-button>
-
-      <ion-tab-button tab="speakers">
-        <ion-icon src="assets/cuenta.svg"></ion-icon>
-        <ion-label>Cuenta</ion-label>
-      </ion-tab-button>
-
-    </ion-tab-bar>
-  </ion-tabs>
+      <ion-item class="cajones">
+        <ion-label position="stacked" class="titulo">Título
+        </ion-label>
+        <ion-input  class="input" placeholder="placeholder"></ion-input>
+      </ion-item>
+  
+      <ion-item class="cajones">
+        <ion-label position="stacked" class="titulo">Ingredientes 
+        </ion-label>
+        <ion-textarea placeholder="placeholder"></ion-textarea>
+      </ion-item>
+  
+      <ion-item class="cajones">
+        <ion-label position="stacked" class="titulo">Proceso 
+        </ion-label>
+        <ion-textarea placeholder="placeholder"></ion-textarea>
+      </ion-item>
+  
+      <ion-item class="cajones">
+        <ion-label class="titulo">Tiempo de ejecución: </ion-label>
+        <ion-input class="input"  placeholder="placeholder" type="text"></ion-input>
+      </ion-item>
+      
+    </form>
+  </ion-list>
+  
 </ion-content>
+
+
+
+
+
+
+
+
+
