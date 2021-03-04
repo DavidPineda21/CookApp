@@ -19,7 +19,27 @@ const routes: Routes = [
         ] 
       },
 
+        {
+          path: 'buscar',
+          children:[
+            {
+              path:'',
+              loadChildren:() => import('../buscar/buscar.module').then(m=> m.BuscarPageModule)
+            }
+  
+          ] 
+        },
       
+        {
+          path: 'cuenta',
+          children:[
+            {
+              path:'',
+              loadChildren:() => import('../slidies/slidies.module').then(m=> m.SlidiesPageModule)
+            }
+  
+          ] 
+        },
       {
         path:'',
         redirectTo:'/tabs/anadir-receta',
