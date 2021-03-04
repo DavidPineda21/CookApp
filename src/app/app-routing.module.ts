@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
+<<<<<<< HEAD
   {
     path: 'home',
     loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
@@ -35,7 +36,18 @@ const routes: Routes = [
   {
     path: 'buscar',
     loadChildren: () => import('./buscar/buscar.module').then( m => m.BuscarPageModule)
+  },  {
+    path: 'home',
+    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
   },
+
+=======
+  
+  {
+    path: '',
+    loadChildren: () => import('./tab-menu/tab-menu.module').then(m=> m.TabMenuPageModule)
+  } 
+>>>>>>> 8919b32b76fb072a58aaa30ffe3e24ac49f2e477
 
 ];
 

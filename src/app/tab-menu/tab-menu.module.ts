@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { IniciarSesionPageRoutingModule } from './iniciar-sesion-routing.module';
+import { TabMenuRoutingModule } from './tab-menu-routing.module';
 
-import { IniciarSesionPage } from './iniciar-sesion.page';
+import { TabMenuPage } from './tab-menu.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    IniciarSesionPageRoutingModule
+    TabMenuRoutingModule
   ],
-  declarations: [IniciarSesionPage]
+  declarations: [TabMenuPage]
 })
-export class IniciarSesionPageModule {}
+export class TabMenuPageModule {}
