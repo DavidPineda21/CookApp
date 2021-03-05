@@ -6,12 +6,18 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: () => import('./tab-menu/tab-menu.module').then(m=> m.TabMenuPageModule)
-<<<<<<< HEAD
   },
-  
-=======
-  },   
->>>>>>> 95597698664ff22271406b00e9ec740e46a9f4d4
+  {
+    path: 'slidies',
+    loadChildren: () => import('./slidies/slidies.module').then(m=> m.SlidiesPageModule)
+  },
+  {
+    path: '',
+    loadChildren: () => import('./tab-pp/tab-pp.module').then( m => m.TabPpPageModule)
+  },
+
+
+   
 
 ];
 

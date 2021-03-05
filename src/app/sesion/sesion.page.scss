@@ -13,14 +13,16 @@ ion-toolbar{
 }
 
 ion-content.background{
-    --background: url(../../assets/fondo-ins.svg) no-repeat;
+    --background: url(../../assets/fondo-ins.jpg) 0 0/100% 100% no-repeat;
 }
 
+
 .titulo{
-    display: inline-block;
-    margin-top: 70px;
-    margin-left: 65px;
-    margin-bottom: 0%;
+    position: center;
+    display: block;
+     margin:auto;
+     margin-top: 20px;
+     margin-left: 50px;
     font-size: 40px;
     color: white;
     font-family: Pacifico;
@@ -79,11 +81,8 @@ ion-button{
 
     --background:  rgba(239, 240, 242, 0.56);
     margin-top: 50px;
-    margin-left: 30px;
     text-align: left;
     font-family: cursive;
-    width: 297px;
-    height: 30px;
     color: white;
     position: relative;
 }

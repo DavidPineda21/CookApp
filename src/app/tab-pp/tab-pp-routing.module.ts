@@ -1,30 +1,20 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { TabMenuPage } from './tab-menu.page';
+import { TabPpPage } from './tab-pp.page';
 
 const routes: Routes = [
   {
-    path:'tabs',
-    component: TabMenuPage,
+    path:'tab',
+    component: TabPpPage,
     children: [
+
       {
-        path: 'anadir-receta',
+        path: 'sesion',
         children:[
           {
             path:'',
-            loadChildren:() => import('../anadir-receta/anadir-receta.module').then(m=> m.AnadirRecetaPageModule)
-          }
-
-        ] 
-      },
-
-      {
-        path: 'cuenta',
-        children:[
-          {
-            path:'',
-            loadChildren:() => import('../cuenta/cuenta.module').then(m=> m.CuentaPageModule)
+            loadChildren:() => import('../sesion/sesion.module').then(m=> m.SesionPageModule)
           }
 
         ] 
@@ -41,13 +31,24 @@ const routes: Routes = [
           ] 
         },
       
+        
+      {
+        path:'',
+        redirectTo:'/tabs/anadir-receta',
+        pathMatch:'full'
+      },
 
     ]
   },
+  {
+    path:'',
+    redirectTo:'/tab/sesion',
+    pathMatch:'full'
+  }
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class TabMenuRoutingModule {}
+export class TabPpRoutingModule {}
