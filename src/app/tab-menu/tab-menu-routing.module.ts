@@ -30,7 +30,16 @@ const routes: Routes = [
         ] 
       },
 
-      
+      {
+        path: 'recetas-guardadas',
+        children:[
+          {
+            path:'',
+            loadChildren:() => import('../recetas-guardadas/recetas-guardadas.module').then(m=> m.RecetasGuardadasPageModule)
+          }
+
+        ] 
+      },
       {
         path:'',
         redirectTo:'/tabs/home',

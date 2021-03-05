@@ -12,14 +12,32 @@ ion-toolbar{
     color: #bb2222;
     font-family: 'Pacifico', cursive;
     font-size: xx-large
-    
+
 }
+
+.titulo2{
+    color: #bb2222;
+    font-family: 'Pacifico', cursive;
+    font-size: 40px;
+    text-align: center;
+    
+        -webkit-text-stroke: 0.5px rgb(255, 255, 255);
+        
+      }
+
 
 .subtitulo{
     color: #000000;
     font-family: 'Pacifico', cursive;
     font-size: x-large
     
+}
+
+.subtitulo2{
+    color: #000000;
+    font-family: 'Pacifico', cursive;
+    font-size: 18px;
+    text-align: center;
 }
 
 
