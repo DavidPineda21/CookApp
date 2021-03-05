@@ -49,25 +49,18 @@ const routes: Routes = [
 
         ] 
       },
+
       {
-        path:'',
-        redirectTo:'/tabs/home',
-        pathMatch:'full'
+        path: 'buscar',
+        children:[
+          {
+            path:'',
+            loadChildren:() => import('../buscar/buscar.module').then(m=> m.BuscarPageModule)
+          }
+
+        ] 
       },
-
-         
-      
-
-        {
-          path: 'buscar',
-          children:[
-            {
-              path:'',
-              loadChildren:() => import('../buscar/buscar.module').then(m=> m.BuscarPageModule)
-            }
-  
-          ] 
-        },
+       
       
     
     ]
