@@ -30,7 +30,18 @@ const routes: Routes = [
         ] 
       },
 
+        {
+          path: 'buscar',
+          children:[
+            {
+              path:'',
+              loadChildren:() => import('../buscar/buscar.module').then(m=> m.BuscarPageModule)
+            }
+  
+          ] 
+        },
       
+        
       {
         path:'',
         redirectTo:'/tabs/anadir-receta',
