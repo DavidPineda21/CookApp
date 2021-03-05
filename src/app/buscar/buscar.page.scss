@@ -16,13 +16,14 @@ ion-content.background{
     --background: url(../../assets/fondo-buscar.jpg) 0 0/100% 100% no-repeat;
 }
 
-    ion-list{
-        #form {
-            margin-top: 4%;
-            padding-left: 30px;
-            padding-right: 30px; 
-        }
-    
+    .contenedor{
+
+        margin-top: 4%;
+        padding-left: 30px;
+        padding-right: 30px;
+
+    }
+        
         .items{
             background-color: rgba(255, 255, 255, 0.829); 
             border-radius: 20px;
@@ -44,11 +45,11 @@ ion-content.background{
             color: rgb(255, 255, 255);
             font-family: 'Pacifico', 'cursive';
             font-size: 30px;
-            margin-left: 15%;
+            margin-left: 20%;
         }
 
         .buscar{
             border-color: black;
             font-family: 'Pacifico', 'cursive';
         }
-    }
+    

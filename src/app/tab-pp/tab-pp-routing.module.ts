@@ -32,19 +32,11 @@ const routes: Routes = [
         },
       
         
-      {
-        path:'',
-        redirectTo:'/tabs/anadir-receta',
-        pathMatch:'full'
-      },
+      
 
     ]
-  },
-  {
-    path:'',
-    redirectTo:'/tab/sesion',
-    pathMatch:'full'
   }
+  
 ];
 
 @NgModule({
