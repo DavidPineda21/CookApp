@@ -1,0 +1,60 @@
+ion-toolbar{
+            
+  
+    .logo{
+        margin-top: 3%;
+        margin-left: 0%;
+        width: 30%;
+        height: 0%;
+    }
+}
+.titulo{
+    color: #bb2222;
+    font-family: 'Pacifico', cursive;
+    font-size: xx-large
+    
+}
+
+.subtitulo{
+    color: #000000;
+    font-family: 'Pacifico', cursive;
+    font-size: x-large
+    
+}
+
+
+
+.sanduche{
+            width: 200px ;
+            height: 200px;
+            left: 20000px;
+            right: 40px;
+            top: 100%;
+            bottom: 100%;
+            margin-left: auto;
+    margin-right: auto;
+    display: block;
+    border: #ffffff 5px solid;
+}
+
+.postre{
+    width: 200px ;
+    height: 200px;
+    left: 20000px;
+    right: 40px;
+    top: 100%;
+    bottom: 100%;
+    margin-left: auto;
+margin-right: auto;
+display: block;
+border: #ffffff 5px solid;
+}
+
+.card{
+    background: #0ae7b0e1;
+}
+
+ion-content.background{
+    --background: url(../../assets/fondo.svg) 0 0/100% 100% no-repeat;
+}
+

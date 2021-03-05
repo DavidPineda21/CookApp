@@ -26,9 +26,37 @@ const routes: Routes = [
             path:'',
             loadChildren:() => import('../cuenta/cuenta.module').then(m=> m.CuentaPageModule)
           }
+        ]
+      },
+      {
+        path: 'home',
+        children:[
+          {
+            path:'',
+            loadChildren:() => import('../home/home.module').then(m=> m.HomePageModule)
+          }
 
         ] 
       },
+
+      {
+        path: 'recetas-guardadas',
+        children:[
+          {
+            path:'',
+            loadChildren:() => import('../recetas-guardadas/recetas-guardadas.module').then(m=> m.RecetasGuardadasPageModule)
+          }
+
+        ] 
+      },
+      {
+        path:'',
+        redirectTo:'/tabs/home',
+        pathMatch:'full'
+      },
+
+         
+      
 
         {
           path: 'buscar',
@@ -41,9 +69,10 @@ const routes: Routes = [
           ] 
         },
       
-
+    
     ]
-  },
+  }
+
 ];
 
 @NgModule({
