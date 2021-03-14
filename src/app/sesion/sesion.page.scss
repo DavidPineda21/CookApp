@@ -17,73 +17,63 @@ ion-content.background{
 }
 
 
+
 .titulo{
-    position: center;
-    display: block;
-     margin:auto;
-     margin-top: 20px;
-     margin-left: 50px;
+
+    max-width: 100%;
+    max-height: 100%;
+    margin-top: 15px;
     font-size: 40px;
     color: white;
+    text-align: center;
     font-family: Pacifico;
 }
 
 .input[type="text"]{
-    margin-top: 20px;
-    margin-left: 50px;
-    position: relative;
-    width: 230px;
+    
+    
     color: white;
-    border-bottom: 2px solid white;
+    border-bottom: 3px solid white;
     padding: 12px 40px;
     text-align: center;
     font-family: Pacifico;
 }
 .input[type="password"]{
-    margin-top: 10px;
-    margin-left: 50px;
-    position: relative;
-    width: 230px;
+    
     color: white;
-    border-bottom: 2px solid white;
+    border-bottom: 3px solid white;
     padding: 12px 40px;
     text-align: center;
     font-family: Pacifico;
 }
-.input[type="text"]{
-    background: url(../../assets/user.svg) 5px no-repeat;
-}
-.input[type="password"]{
-    background: url(../../assets/key.svg) 5px no-repeat;
-}
 
-.gg{
-    margin-top: 10px;
-    display: inline-block;
-    left: 60px;
-    text-decoration: black;
-    background-color: none;
-    color: white;
-    position: relative;
-}
+
+
 .text-google{
     margin-top: 8px;
-    margin-left: 10px;
-    display: inline-block;
-    left: 60px;
     text-decoration: black;
     background-color: none;
-    color: white;
-    border-bottom: 0.5px solid white;
-    position: relative;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.938);
+    border-bottom: 3px solid white;
+    font-family: Pacifico;
+    
 }
 ion-button{
 
     --background:  rgba(239, 240, 242, 0.56);
-    margin-top: 50px;
+    margin-top: 30px;
     text-align: left;
     font-family: cursive;
     color: white;
     position: relative;
+}
+
+#cj2,#cj3{
+    margin-top:20px ;
+}
+
+#cj1{
+    margin-top:10px ;
 }
 
