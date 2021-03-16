@@ -20,31 +20,35 @@ const routes: Routes = [
         ] 
       },
 
-        {
-          path: 'buscar',
-          children:[
-            {
-              path:'',
-              loadChildren:() => import('../buscar/buscar.module').then(m=> m.BuscarPageModule)
-            }
-  
-          ] 
-        },
-      
-        
       {
-        path:'',
-        redirectTo:'/tabs/anadir-receta',
-        pathMatch:'full'
+        path: 'buscar',
+        children:[
+          {
+            path:'',
+            loadChildren:() => import('../buscar/buscar.module').then(m=> m.BuscarPageModule)
+          }
+
+        ] 
+      },
+    
+      {
+        path: 'home',
+        children:[
+          {
+            path:'',
+            loadChildren:() => import('../home/home.module').then(m=> m.HomePageModule)
+          }
+
+        ] 
       },
 
+        
+        
+      
+
     ]
-  },
-  {
-    path:'',
-    redirectTo:'/tab/sesion',
-    pathMatch:'full'
   }
+  
 ];
 
 @NgModule({

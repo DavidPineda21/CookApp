@@ -26,24 +26,46 @@ const routes: Routes = [
             path:'',
             loadChildren:() => import('../cuenta/cuenta.module').then(m=> m.CuentaPageModule)
           }
+        ]
+      },
+      {
+        path: 'home',
+        children:[
+          {
+            path:'',
+            loadChildren:() => import('../home/home.module').then(m=> m.HomePageModule)
+          }
 
         ] 
       },
 
-        {
-          path: 'buscar',
-          children:[
-            {
-              path:'',
-              loadChildren:() => import('../buscar/buscar.module').then(m=> m.BuscarPageModule)
-            }
-  
-          ] 
-        },
-      
+      {
+        path: 'recetas-guardadas',
+        children:[
+          {
+            path:'',
+            loadChildren:() => import('../recetas-guardadas/recetas-guardadas.module').then(m=> m.RecetasGuardadasPageModule)
+          }
 
+        ] 
+      },
+
+      {
+        path: 'buscar',
+        children:[
+          {
+            path:'',
+            loadChildren:() => import('../buscar/buscar.module').then(m=> m.BuscarPageModule)
+          }
+
+        ] 
+      },
+       
+      
+    
     ]
-  },
+  }
+
 ];
 
 @NgModule({
