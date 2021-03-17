@@ -22,22 +22,23 @@ ion-content.background{
 
     max-width: 100%;
     max-height: 100%;
-    margin-top: 15px;
-    font-size: 40px;
+    margin-top: 45px;
+    margin-bottom: -10px;
+    font-size: 30px;
     color: white;
     text-align: center;
     font-family: Pacifico;
 }
 
 .input[type="text"]{
-    
-    
     color: white;
     border-bottom: 3px solid white;
     padding: 12px 40px;
     text-align: center;
     font-family: Pacifico;
 }
+
+
 .input[type="password"]{
     
     color: white;
@@ -47,16 +48,13 @@ ion-content.background{
     font-family: Pacifico;
 }
 
-
-
 .text-google{
-    margin-top: 8px;
-    text-decoration: black;
-    background-color: none;
+    display: block;
+    color: white;
     text-align: center;
-    color: rgba(255, 255, 255, 0.938);
-    border-bottom: 3px solid white;
-    font-family: Pacifico;
+    text-decoration: underline;
+    margin-top: 5vw;
+    font-family: 'Pacifico';
     
 }
 ion-button{
@@ -69,11 +67,33 @@ ion-button{
     position: relative;
 }
 
-#cj2,#cj3{
-    margin-top:20px ;
-}
 
 #cj1{
     margin-top:10px ;
+    margin-left: 0px;
+    margin-right: 20px;
 }
 
+#cj2{
+    margin-top:5px ;
+    margin-left: 0px;
+    margin-right: 20px;
+}
+
+#cj3{
+    margin-top:1px ;
+}
+
+
+#rg{
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration: underline;
+    margin-top: 5vw;
+    margin-bottom: 0%;
+}
+
+#btn{
+    margin-top: 30px;
+}

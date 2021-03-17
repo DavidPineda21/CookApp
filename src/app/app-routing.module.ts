@@ -24,8 +24,10 @@ const routes: Routes = [
     loadChildren: () => import('./tab-pp/tab-pp.module').then( m => m.TabPpPageModule)
   },
 
-  
-
+  {
+    path: 'registrarse',
+    loadChildren: () => import('./registrarse/registrarse.module').then( m => m.RegistrarsePageModule)
+  },
 
 ];
 

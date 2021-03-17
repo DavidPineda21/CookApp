@@ -8,18 +8,63 @@
 </ion-header>
 
 <ion-content class="background" [fullscreen]="true">
-  <ion-card class="card">
-    <br>
-    <ion-card-header>
-      <ion-card-title class="titulo">Funciones que puedes encontrar en CookApp</ion-card-title>
-      <ion-card-subtitle class="subtitulo">-Comparte tus recetas </ion-card-subtitle>
-      <br>
-      <img class="sanduche" src="assets/imginicio.jpg" />
-      <br>
-      <ion-card-subtitle class="subtitulo">-Busca nuevas recetas</ion-card-subtitle>
-      <br>
-      <img class="postre" src="assets/postre.jpg" />
-    </ion-card-header>
-  </ion-card>
-  
+
+   <ion-item  color="transparent" lines="none" >
+      <ion-label class="titulo">Recetas CookApp</ion-label>
+    </ion-item>
+
+  <ion-slides pager="true" [options]="slideOpts">
+        <ion-slide>
+          <ion-card>
+            <ion-card-header>
+              <img class="imgs" src="assets/sanduche.jpg"> 
+              <ion-card-title>SANDUCHE</ion-card-title>
+            </ion-card-header>
+            <ion-card-subtitle>Ingredientes</ion-card-subtitle>
+            <ion-card-content>
+              <ul class="ingredientes">
+                <li>1 taza de avena en copos </li>
+                <li>1 plátano mediano-grande, maduro </li> 
+                <li>2-3 cucharadas de pepitas de chocolate puro</li> 
+                <li>10-12 avellanas</li> 
+              </ul>
+            </ion-card-content>
+          </ion-card>
+        </ion-slide>
+        <ion-slide>
+          <ion-card>
+            <ion-card-header>
+              <img class="imgs" src="assets/ceviche.jpg"> 
+              <ion-card-title>CEVICHE</ion-card-title>
+            </ion-card-header>
+            <ion-card-subtitle>Ingredientes</ion-card-subtitle>
+            <ion-card-content>
+              <ul class="ingredientes">
+                <li>1 taza de avena en copos </li>
+                <li>1 plátano mediano-grande, maduro </li> 
+                <li>2-3 cucharadas de pepitas de chocolate puro</li> 
+                <li>10-12 avellanas</li> 
+              </ul>
+            </ion-card-content>
+          </ion-card>
+        </ion-slide>
+        <ion-slide>
+          <ion-card>
+            <ion-card-header>
+              <img class="imgs" src="assets/postre.jpg"> 
+              <ion-card-title>POSTRE DE FRESAS</ion-card-title>
+            </ion-card-header>
+            <ion-card-subtitle>Ingredientes</ion-card-subtitle>
+            <ion-card-content>
+              <ul class="ingredientes">
+                <li>1 taza de avena en copos </li>
+                <li>1 plátano mediano-grande, maduro </li> 
+                <li>2-3 cucharadas de pepitas de chocolate puro</li> 
+                <li>10-12 avellanas</li> 
+              </ul>
+            </ion-card-content>
+          </ion-card>
+        </ion-slide>
+  </ion-slides>
+
 </ion-content>

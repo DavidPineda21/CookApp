@@ -15,15 +15,15 @@
 
   <div  id="contenedor-cajones"[fullscreen]="true" class="ion-padding">
 
-    <ion-item  color="transparent"  lines="none">
+    <ion-item  id="cj1" color="transparent"  lines="none">
       <ion-icon src="assets/user.svg" slot="start"></ion-icon>
-      <ion-input type="text" class="input" placeholder="Usuario">
+      <ion-input id="user" type="text" class="input" placeholder="Usuario">
       </ion-input>
     </ion-item>
 
     <ion-item id="cj2" color="transparent"class="cajones" lines="none">
       <ion-icon src="assets/key.svg" slot="start"></ion-icon>
-      <ion-input  type="password" class="input" placeholder="Contraseña">
+      <ion-input  id="clave" type="password" class="input" placeholder="Contraseña">
       </ion-input>
     </ion-item>
 
@@ -33,18 +33,13 @@
         Ingresar con Google
       </ion-label>
     </ion-item>
-      
-    
-    
-    
-    
 
-    
-
-    <ion-button [routerLink]="['/tabs/anadir-receta']" expand="block" shape="round" >
+    <ion-button id="btn" [routerLink]="['/tabs/home']" expand="block" shape="round" >
       Ingresar
       <ion-icon name="login"slot="start"></ion-icon> 
     </ion-button>
+
+    <ion-label id="rg" (click)="abrirPopover()">¿Quieres registrarte?</ion-label> 
   </div>
 
 </ion-content>

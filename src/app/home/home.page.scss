@@ -1,6 +1,4 @@
 ion-toolbar{
-            
-  
     .logo{
         margin-top: 3%;
         margin-left: 0%;
@@ -8,53 +6,48 @@ ion-toolbar{
         height: 0%;
     }
 }
-.titulo{
-    color: #bb2222;
-    font-family: 'Pacifico', cursive;
-    font-size: xx-large
-    
-}
 
-.subtitulo{
-    color: #000000;
-    font-family: 'Pacifico', cursive;
-    font-size: x-large
-    
-}
-
-
-
-.sanduche{
-            width: 200px ;
-            height: 200px;
-            left: 20000px;
-            right: 40px;
-            top: 100%;
-            bottom: 100%;
-            margin-left: auto;
-    margin-right: auto;
-    display: block;
-    border: #ffffff 5px solid;
-}
-
-.postre{
-    width: 200px ;
-    height: 200px;
-    left: 20000px;
-    right: 40px;
-    top: 100%;
-    bottom: 100%;
-    margin-left: auto;
-margin-right: auto;
-display: block;
-border: #ffffff 5px solid;
-}
-
-.card{
-    background: #0ae7b0e1;
-}
 
 ion-content.background{
-    --background: url(../../assets/fondo.svg) 0 0/100% 100% no-repeat;
+    --background: url(../../assets/fondo-inicio.jpg) 0 0/100% 100% no-repeat;
 }
 
+ion-card{
+    background: white;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    border-radius: 35px;
+    width: 80%;
+    height: 40%;
+}
+
+.titulo{
+    text-align: center;
+    display: block;
+    color: white;
+    font-family: 'TimeNewRoman', cursive;
+    font-size: 25px;
+    text-decoration: underline;
+}
+
+ion-card-title{
+ font-family: 'Pacifico';
+}
+
+ion-card-subtitle{
+   color: black;
+   font-family: cursivew;
+}
+
+.imgs{
+ width: 350px;
+ height: 230px;
+ border-radius: 30px;
+}
+
+.ingredientes{
+   text-size-adjust: 10px;
+   color: black;
+   font-family: 'cursive';
+   font-size: 10px;
+}
