@@ -23,33 +23,11 @@ ion-content.background{
         padding-right: 30px;
 
     }
-        
-        .items{
-            background-color: rgba(255, 255, 255, 0.829); 
-            border-radius: 20px;
-            margin-bottom: 26px;
-            border-color: black;
-            box-shadow: 0 10px 30px 0px rgba(11, 15, 17, 0.219);
-        }
-
-        .img{
-            background-color: rgba(255, 255, 255, 0.829); 
-            border-radius: 20px;
-            margin-bottom: 26px;
-            border-color: black;
-            box-shadow: 0 10px 10px 0px rgba(11, 15, 17, 0.219);
-        }
-        
-        .titulo{
+      
+    .titulo{
             display: inline-flexbox;
             color: rgb(255, 255, 255);
             font-family: 'Pacifico', 'cursive';
             font-size: 30px;
             margin-left: 20%;
         }
-
-        .buscar{
-            border-color: black;
-            font-family: 'Pacifico', 'cursive';
-        }
-    

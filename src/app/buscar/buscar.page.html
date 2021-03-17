@@ -11,17 +11,11 @@
 
 <ion-content class="background" [fullscreen]="true">
   <ion-label position="stacked" class="titulo">Ecuentra recetas </ion-label>
-  <div class="contenedor">
-    <ion-item class="items">
-      <img src="assets/icon-yt.svg" alt="">
-      <ion-input  position="stacked" id="buscar" type="text" class="input" placeholder="Buscar"></ion-input>
-    </ion-item>
-    <ion-item class="items">
-      <img  position="stacked" class="img" src="assets/receta1.svg" alt="">
-    </ion-item>
 
-    <ion-item class="items">
-      <img  position="stacked" class="img" class="recetas" src="assets/receta2.svg" alt="">
-    </ion-item>
+  <ion-searchbar [animated]="true" [showCancelButton]="false">
+  </ion-searchbar>
+
+  <div class="contenedor">
+    
   </div>     
 </ion-content>

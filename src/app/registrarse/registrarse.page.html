@@ -1,0 +1,36 @@
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="tt-pp">Registrarse</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="background">
+  <div  id="contenedor-cajones"[fullscreen]="true" class="ion-padding">
+
+    <ion-item  id="cj1" color="transparent"  lines="none">
+      <ion-icon src="assets/user.svg" slot="start"></ion-icon>
+      <ion-input id="user" type="text" class="input" placeholder="Usuario">
+      </ion-input>
+    </ion-item>
+
+    <ion-item id="cj2" color="transparent"class="cajones" lines="none">
+      <ion-icon src="assets/key.svg" slot="start"></ion-icon>
+      <ion-input  id="clave" type="password" class="input" placeholder="Contraseña">
+      </ion-input>
+    </ion-item>
+    
+    
+    <ion-item id="cj3" color="transparent"class="cajones" lines="none">
+      <ion-icon src="assets/key.svg" slot="start"></ion-icon>
+      <ion-input  id="clave" type="password" class="input" placeholder="Confirmar">
+      </ion-input>
+    </ion-item>
+
+    <ion-button id="btn" [routerLink]="['/tabs/home']" expand="block" shape="round" >
+      Continuar
+      <ion-icon name="login"slot="start"></ion-icon> 
+    </ion-button>
+  </div>
+</ion-content>
