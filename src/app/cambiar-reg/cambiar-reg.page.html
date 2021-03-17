@@ -1,0 +1,38 @@
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<ion-header>
+  <ion-toolbar>
+    <ion-title>CAMBIAR DATOS</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div  id="contenedor-cajones"[fullscreen]="true" class="ion-padding">
+    <ion-item class="cajones">
+      <ion-label class="titulo">Nombre: </ion-label>
+      <ion-input class="input"  placeholder="placeholder" type="text"></ion-input>
+    </ion-item>
+  
+    <ion-item class="cajones">
+      <ion-label class="titulo">Apellido: </ion-label>
+      <ion-input class="input"  placeholder="placeholder" type="text"></ion-input>
+    </ion-item>
+  
+    <ion-item class="cajones">
+      <ion-label class="titulo">contraseña: </ion-label>
+      <ion-input class="input"  placeholder="placeholder" type="password"></ion-input>
+    </ion-item>
+  
+    <ion-item class="cajones">
+      <ion-label class="titulo">Confirme contraseña: </ion-label>
+      <ion-input class="input"  placeholder="placeholder" type="password"></ion-input>
+    </ion-item>
+  
+    <ion-button id="btnSalir"  expand="block" shape="round" >
+      Guardar
+      <ion-icon name="checkmark-outline"slot="start"></ion-icon> 
+    </ion-button>
+  </div>
+  
+
+</ion-content>

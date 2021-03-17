@@ -17,9 +17,9 @@
     <ion-img class="imagen" src="assets/usuario.svg"></ion-img>
   </ion-item>
 
-  <div  id="contenedor-cajones"[fullscreen]="true" class="ion-padding">
+  <div  id="contenedor-cajones" class="ion-padding">
 
-    <ion-item id="cj1"  class="cajones" lines="none">
+    <ion-item (click)="abrirPopover()"  id="cj1"  class="cajones" lines="none">
       <ion-icon name="person" slot="start"></ion-icon>
       <ion-label >
         Cambiar nombre y apellidos
@@ -27,20 +27,20 @@
       <ion-icon name="chevron-forward" slot="end"></ion-icon>
     </ion-item>
 
-    <ion-item id="cj2"class="cajones" lines="none">
-      <ion-icon name="key-outline" slot="start"></ion-icon>
-      <ion-label >
-        Cambiar clave
-      </ion-label>
-      <ion-icon name="chevron-forward" slot="end"></ion-icon>
-    </ion-item>
-
-    <ion-item id="cj3" class="cajones" lines="none">
+    <ion-item id="cj2" class="cajones" lines="none">
       <ion-icon  name="information-circle-outline" slot="start"></ion-icon>
       <ion-label>
         Información
       </ion-label>
       <ion-icon name="chevron-forward" slot="end"></ion-icon>
+    </ion-item>
+
+    <ion-item id="cj3"class="cajones" lines="none">
+      <ion-icon name="moon" slot="start"></ion-icon>
+      <ion-label >
+        Modo oscuro
+      </ion-label>
+      <ion-toggle (ionChange)='modoscuro($event)' color="dark" slot="end"></ion-toggle>
     </ion-item>
 
     <ion-button id="btnSalir" [routerLink]="['/tab/sesion']" expand="block" shape="round" >
