@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { PopoverController} from '@ionic/angular';
 import { RegistrarsePage } from '../registrarse/registrarse.page';
 import {Storage} from '@ionic/storage';
+import {Router} from '@angular/router';
+
 @Component({
   selector: 'app-sesion',
   templateUrl: './sesion.page.html',
@@ -9,7 +11,7 @@ import {Storage} from '@ionic/storage';
 })
 export class SesionPage implements OnInit {
 
-  constructor(public popoverController:PopoverController,private storage:Storage) {
+  constructor(private router:Router, public popoverController:PopoverController,private storage:Storage) {
     this.storage.get('temaOscuro').then((result)=>{
       if(result=== true){
         document.body.setAttribute('color-theme','dark');
@@ -34,19 +36,16 @@ export class SesionPage implements OnInit {
       mode:'ios'
     });
 
- /* function sesion(){
-     const clave = document.getElementById("clave");
-     const usuario = document.getElementById("user");
-    if(){
-
-    }
-
-  }*/
     return await popover.present();
 
   }
 
   ngOnInit() {
   }
+
+  sesion(){
+    this.storage.set('sesioniniciada','prueba');
+    this.router.navigateByUrl('/tabs/home'); 
+   }
 
 }
