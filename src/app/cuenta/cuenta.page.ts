@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 
 import { PopoverController} from '@ionic/angular';
 
+import {Storage} from '@ionic/storage';
+
 //componente
 import {CambiarRegPage }from '../cambiar-reg/cambiar-reg.page';
 
@@ -12,7 +14,20 @@ import {CambiarRegPage }from '../cambiar-reg/cambiar-reg.page';
 })
 export class CuentaPage implements OnInit {
 
-  constructor( public popoverController:PopoverController) { }
+  toggleActive=false;
+
+  constructor( public popoverController:PopoverController,private storage:Storage) {
+    this.storage.get('temaOscuro').then((result)=>{
+      if(result=== true){
+        document.body.setAttribute('color-theme','dark');
+        this.toggleActive=true; 
+      }
+      else{
+        document.body.setAttribute('color-theme','light');
+        this.toggleActive=false;
+      }
+    });
+   }
 
   ngOnInit() {
   }
@@ -31,9 +46,11 @@ export class CuentaPage implements OnInit {
 
   modoscuro(event){
     if(event.detail.checked){
-      document.body.setAttribute('color-theme','dark')
+      document.body.setAttribute('color-theme','dark');
+      this.storage.set('temaOscuro',true)
     }else{
-      document.body.setAttribute('color-theme','light')
+      document.body.setAttribute('color-theme','light');
+      this.storage.set('temaOscuro',false)
     }
   }
 

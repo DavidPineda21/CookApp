@@ -17,6 +17,17 @@ export class SlidiesPage implements OnInit {
       }
     });
 
+    this.storage.get('temaOscuro').then((result)=>{
+      if(result=== true){
+        document.body.setAttribute('color-theme','dark');
+         
+      }
+      else{
+        document.body.setAttribute('color-theme','light');
+        
+      }
+    });
+
    }
 
   ngOnInit() {
