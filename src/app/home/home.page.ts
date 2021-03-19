@@ -18,17 +18,20 @@ export class HomePage implements OnInit {
       else{
         document.body.setAttribute('color-theme','light');
       }
-    })
+    });
 
     this.storage.get('sesioniniciada').then((result)=>{
       console.log(result);
-      if(result){
+      if(result===true){
       this.router.navigateByUrl('tabs/home');
       }
+      else{
+        this.router.navigateByUrl('tab/home');
+      }
     });
+
+    
   }
-        
-  
 
   ngOnInit() {
   }

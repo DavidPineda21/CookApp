@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { PopoverController} from '@ionic/angular';
 
 import {Storage} from '@ionic/storage';
+import {Router} from '@angular/router';
 
 //componente
 import {CambiarRegPage }from '../cambiar-reg/cambiar-reg.page';
@@ -16,7 +17,7 @@ export class CuentaPage implements OnInit {
 
   toggleActive=false;
 
-  constructor( public popoverController:PopoverController,private storage:Storage) {
+  constructor( private router:Router, public popoverController:PopoverController,private storage:Storage) {
     this.storage.get('temaOscuro').then((result)=>{
       if(result=== true){
         document.body.setAttribute('color-theme','dark');
@@ -53,5 +54,10 @@ export class CuentaPage implements OnInit {
       this.storage.set('temaOscuro',false)
     }
   }
+
+  Csesion(){
+    this.storage.set('sesioniniciada',false);
+    this.router.navigateByUrl('/tab/home'); 
+   }
 
 }

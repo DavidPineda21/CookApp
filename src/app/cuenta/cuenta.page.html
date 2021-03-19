@@ -43,7 +43,7 @@
       <ion-toggle (ionChange)='modoscuro($event)' checked="{{toggleActive}}" color="dark" slot="end"></ion-toggle>
     </ion-item>
 
-    <ion-button id="btnSalir" [routerLink]="['/tab/sesion']" expand="block" shape="round" >
+    <ion-button id="btnSalir" (click)= "Csesion()" expand="block" shape="round" >
       Cerrar sesión
       <ion-icon name="log-out"slot="start"></ion-icon> 
     </ion-button>

@@ -36,6 +36,7 @@ export class SesionPage implements OnInit {
       mode:'ios'
     });
 
+
     return await popover.present();
 
   }
@@ -44,7 +45,7 @@ export class SesionPage implements OnInit {
   }
 
   sesion(){
-    this.storage.set('sesioniniciada','prueba');
+    this.storage.set('sesioniniciada',true);
     this.router.navigateByUrl('/tabs/home'); 
    }
 
