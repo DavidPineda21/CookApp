@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { read } from 'node:fs';
 
 @Component({
   selector: 'app-anadir-receta',
@@ -7,8 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AnadirRecetaPage implements OnInit {
 
-  constructor() { }
-
+  constructor() {}
+  
   ngOnInit() {
   }
 
