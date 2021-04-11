@@ -19,9 +19,23 @@ export class AnadirRecetaPage implements OnInit {
         
       }
     });
-   }
-
-  ngOnInit() {
+  
   }
 
+  ngOnInit() {
+    //this.anadir_card();
+  }
+
+  anadir_card() {
+    const card = document.createElement("card");
+    const guardar = document.getElementById("guardar");
+
+    guardar.innerHTML = 
+    `
+    <ion-button id="guardar" onclick = "anadir_card()" expand="block" shape="round" >Pepe</ion-button>
+    
+    `
+
+    document.body.appendChild(card);
+  }
 }

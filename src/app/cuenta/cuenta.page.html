@@ -13,15 +13,15 @@
 
 <ion-content class="background"  [fullscreen]="true" >
 
-  <ion-item id="item-user" class="circulo" lines="none">
-    <ion-img id="foto-user" class="imagen" src="assets/usuario.svg"></ion-img>
+  <ion-item id="item-user"  class="circulo" lines="none">
+    <ion-img id="foto-user"  (ionchange)='foto($event)' class="imagen" src="assets/usuario.svg"></ion-img>
   </ion-item>
 
   <div  id="contenedor-cajones" class="ion-padding">
 
     <ion-item (click)="abrirPopover()"  id="cj1"  class="cajones" lines="none">
       <ion-icon name="person" slot="start"></ion-icon>
-      <ion-label >
+      <ion-label>
         Cambiar nombre y apellidos
       </ion-label>
       <ion-icon name="chevron-forward" slot="end"></ion-icon>

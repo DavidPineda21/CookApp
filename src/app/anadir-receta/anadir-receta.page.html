@@ -5,8 +5,7 @@
     <img src="assets/atras.svg"> 
     <img class="logo" src="assets/logo.svg">
     <ion-buttons slot="end">
-      <ion-button expand="block" shape="round" >Guardar
-      </ion-button>
+      <ion-button id="guardar" onclick = "anadir_card()" expand="block" shape="round" >Guardar</ion-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
@@ -20,11 +19,10 @@
           <ion-img id="cam" class="fcamara" src="assets/agg_img_plato.svg"></ion-img>
           <ion-img id="foto" class="camara" src="assets/camara.svg"></ion-img>
         </ion-label >
-        
       </ion-item>
   
       <ion-item class="cajones">
-        <ion-label position="stacked" class="titulo">Título
+        <ion-label position="stacked" id = "titulo" class="titulo">Título
         </ion-label>
         <ion-input  id="titulo" class="input" placeholder="placeholder"></ion-input>
       </ion-item>

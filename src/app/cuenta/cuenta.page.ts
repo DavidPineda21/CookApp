@@ -27,6 +27,7 @@ export class CuentaPage implements OnInit {
         this.toggleActive=false;
       }
     });
+
    }
 
   ngOnInit() {
@@ -54,4 +55,25 @@ export class CuentaPage implements OnInit {
     }
   }
 
+  foto(event){
+    const inpFile = document.getElementById("foto");
+    const label = document.getElementById("item-user");
+    const ft = label.querySelector("foto-user");
+    
+    inpFile.addEventListener("cambiar", function() {
+      const file = this.files[0];
+
+      if(file){
+        const rader = new FileReader();
+
+        rader.addEventListener("carga", function(){
+          console.log(this);
+          label.setAttribute("src", this.result);
+        });
+
+        rader.readAsDataURL(file);
+      }
+      console.log(file);
+    });
+  }
 }
