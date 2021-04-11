@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">CookApp</string>
+    <string name="title_activity_main">CookApp</string>
+    <string name="package_name">com.CPD.CookApp</string>
+    <string name="custom_url_scheme">com.CPD.CookApp</string>
+</resources>

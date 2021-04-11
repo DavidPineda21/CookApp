@@ -3,19 +3,29 @@
 <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 <ion-header>
   <ion-toolbar>
-    <img [routerLink]="['/anadir-receta']" class="btn-bk" src="assets/atras.svg"> 
-    <img class="logo" src="assets/logo.svg">
-   
+    <ion-title>CAMBIAR DATOS</ion-title>
   </ion-toolbar>
 </ion-header>
-
+  
 <ion-content class="background" [fullscreen]="true">
-  <ion-label position="stacked" class="titulo">Ecuentra recetas </ion-label>
 
-  <ion-searchbar [animated]="true" [showCancelButton]="false">
+  <ion-searchbar autocomplete="on" debounce="800" animated [(ngModel)]="searchModel" (ionClear)="videos =[]" (ionChange)="search()" >
   </ion-searchbar>
 
-  <div class="contenedor">
+  <ion-List>
+    <ion-list-header>
+      Recientes busquedas
+    </ion-list-header>
     
-  </div>     
+    <ion-item *ngFor="let video of videos">
+      <ion-avatar slot="start" (click)="streamVideo(video.id.videoId)">
+        <img [src]="video.snippet.thumbnails.high.url">
+      </ion-avatar>
+      <ion-label>
+        <h2>{{video.snippet.title}}</h2>
+      </ion-label>
+  
+    </ion-item>
+  </ion-List>
+    
 </ion-content>
