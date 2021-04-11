@@ -1,0 +1,18 @@
+{
+  "targets": {
+    "login-7552b": {
+      "hosting": {
+        "app": [
+          "login-7552b"
+        ]
+      }
+    },
+    "login-cookapp": {
+      "hosting": {
+        "app": [
+          "login-cookapp"
+        ]
+      }
+    }
+  }
+}
