@@ -1,0 +1,32 @@
+ion-title{
+    text-align: center;
+}
+
+.cajones{
+   
+    background-color: rgba(255, 255, 255, 0.829); 
+    border-radius: 20px;
+    margin-bottom: 26px;
+    box-shadow: 0 10px 30px 0px rgba(199, 182, 30, 0.479);
+   
+}
+
+.titulo{
+    color: #000000;
+    font-family: 'Pacifico', cursive;
+    
+}
+
+div{
+    margin-top: 20px;
+}
+
+ion-button{
+    --background: rgba(255, 116, 38, 0.56);
+    font-family: 'Pacifico', cursive;
+    letter-spacing: -0.333333px;
+    color: rgba(254, 243, 243, 0.83);
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    border-radius: 30px
+}

@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import {Storage} from '@ionic/storage';
 
 @Component({
-  selector: 'app-tab-menu',
-  templateUrl: './tab-menu.page.html',
-  styleUrls: ['./tab-menu.page.scss'],
+  selector: 'app-cambiar-reg',
+  templateUrl: './cambiar-reg.page.html',
+  styleUrls: ['./cambiar-reg.page.scss'],
 })
-export class TabMenuPage implements OnInit {
+export class CambiarRegPage implements OnInit {
 
   constructor( private storage:Storage) {
     this.storage.get('temaOscuro').then((result)=>{

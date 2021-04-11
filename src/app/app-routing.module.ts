@@ -23,6 +23,15 @@ const routes: Routes = [
     path: '',
     loadChildren: () => import('./tab-pp/tab-pp.module').then( m => m.TabPpPageModule)
   },
+  {
+    path: 'cambiar-reg',
+    loadChildren: () => import('./cambiar-reg/cambiar-reg.module').then( m => m.CambiarRegPageModule)
+  },
+  
+  {
+    path: '',
+    loadChildren: () => import('./tab-pp/tab-pp.module').then( m => m.TabPpPageModule)
+  },
 
   {
     path: 'registrarse',
@@ -30,6 +39,12 @@ const routes: Routes = [
   },
 
 ];
+
+
+  
+
+
+
 
 @NgModule({
   imports: [

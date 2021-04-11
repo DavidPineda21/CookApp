@@ -25,9 +25,12 @@ ion-content.background{
     }
       
     .titulo{
-            display: inline-flexbox;
+            text-align: center;
+            display: block;
             color: rgb(255, 255, 255);
             font-family: 'Pacifico', 'cursive';
-            font-size: 30px;
+            font-size: 40px;
             margin-left: 20%;
+            margin-bottom: 30px;
+            margin-top: -20px;
         }
