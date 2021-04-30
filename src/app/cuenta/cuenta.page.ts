@@ -1,11 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-
-import { PopoverController} from '@ionic/angular';
-
+import { PopoverController } from '@ionic/angular';
 import {Storage} from '@ionic/storage';
 import {Router} from '@angular/router';
-
-//componente
+import {Plugins, CameraResultType, CameraSource, Geolocation, Camera} from "@capacitor/core";
+import { DomSanitizer, SafeResourceUrl } from "@angular/platform-browser";
 import {CambiarRegPage }from '../cambiar-reg/cambiar-reg.page';
 
 @Component({
@@ -16,24 +14,26 @@ import {CambiarRegPage }from '../cambiar-reg/cambiar-reg.page';
 export class CuentaPage implements OnInit {
 
   toggleActive=false;
+  img = "assets/usuario.svg";
+  foto: SafeResourceUrl;
 
-  constructor( private router:Router, public popoverController:PopoverController,private storage:Storage) {
-    this.storage.get('temaOscuro').then((result)=>{
-      if(result=== true){
-        document.body.setAttribute('color-theme','dark');
-        this.toggleActive=true; 
-      }
-      else{
-        document.body.setAttribute('color-theme','light');
-        this.toggleActive=false;
-      }
-    });
-
-   }
+  constructor( private router:Router, public popoverController:PopoverController,private storage:Storage, private sanitize: DomSanitizer) {
+  }
 
   ngOnInit() {
   }
 
+  async tomarfoto(){
+    const imagen = await Plugins.Camera.getPhoto({
+      quality: 100,
+      allowEditing: false,
+      resultType: CameraResultType.DataUrl,
+      source: CameraSource.Camera
+    });
+
+    this.foto = this.sanitize.bypassSecurityTrustResourceUrl(imagen && imagen.dataUrl);
+  }
+  
   async abrirPopover(ev: any ){
     const popover = await this.popoverController.create({
       component: CambiarRegPage,
@@ -56,30 +56,6 @@ export class CuentaPage implements OnInit {
     }
   }
 
-  foto(event){
-    const inpFile = document.getElementById("foto");
-    const label = document.getElementById("item-user");
-    const ft = label.querySelector("foto-user");
-    
-    inpFile.addEventListener("cambiar", function() {
-      const file = this.files[0];
-
-      if(file){
-        const rader = new FileReader();
-
-        rader.addEventListener("carga", function(){
-          console.log(this);
-          label.setAttribute("src", this.result);
-        });
-
-        rader.readAsDataURL(file);
-      }
-      console.log(file);
-    });
-  }
-  Csesion(){
-    this.storage.set('sesioniniciada',false);
-    this.router.navigateByUrl('/tab/home'); 
-   }
+  
 
 }

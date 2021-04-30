@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Storage} from '@ionic/storage';
+import {Plugins, CameraResultType, CameraSource, Geolocation, Camera } from "@capacitor/core";
+import { DomSanitizer, SafeResourceUrl } from "@angular/platform-browser";
 
 @Component({
   selector: 'app-anadir-receta',
@@ -8,7 +10,10 @@ import {Storage} from '@ionic/storage';
 })
 export class AnadirRecetaPage implements OnInit {
 
-  constructor( private storage:Storage) {
+  img = "assets/agg_img_plato.svg";
+  foto: SafeResourceUrl;
+
+  constructor( private storage:Storage, private sanitize: DomSanitizer) {
     this.storage.get('temaOscuro').then((result)=>{
       if(result=== true){
         document.body.setAttribute('color-theme','dark');
@@ -26,16 +31,14 @@ export class AnadirRecetaPage implements OnInit {
     //this.anadir_card();
   }
 
-  anadir_card() {
-    const card = document.createElement("card");
-    const guardar = document.getElementById("guardar");
-
-    guardar.innerHTML = 
-    `
-    <ion-button id="guardar" onclick = "anadir_card()" expand="block" shape="round" >Pepe</ion-button>
-    
-    `
-
-    document.body.appendChild(card);
+  async tomarfoto(){
+    const imagen = await Plugins.Camera.getPhoto({
+      quality: 100,
+      allowEditing: false,
+      resultType: CameraResultType.DataUrl,
+      source: CameraSource.Camera
+    });
   }
+
+
 }
