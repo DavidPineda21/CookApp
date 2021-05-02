@@ -38,7 +38,9 @@ export class AnadirRecetaPage implements OnInit {
       resultType: CameraResultType.DataUrl,
       source: CameraSource.Camera
     });
+    this.foto = this.sanitize.bypassSecurityTrustResourceUrl(imagen && imagen.dataUrl);
   }
+  
 
 
 }
