@@ -56,6 +56,8 @@ export class CuentaPage implements OnInit {
     }
   }
 
-  
-
+  Csesion(){
+    this.storage.set('sesioniniciada',false);
+    this.router.navigateByUrl('/tab/home'); 
+   }
 }
