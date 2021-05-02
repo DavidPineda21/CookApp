@@ -16,10 +16,8 @@
     
       <ion-item class="cajon_img">
         <ion-label id="label" class="label_img"  >
-          <ion-img id="cam" class="fcamara" (click) = "tomarfoto()" src="assets/agg_img_plato.svg"></ion-img>
-          <ion-img id="foto" class="camara" src="assets/camara.svg"></ion-img>
-          <img [src]="img" *ngIF="!foto">
-          <img [src]="foto" *ngIF="foto">
+          <img id="cam" class="fcamara" (click) = "tomarfoto()" [src]="img" *ngIf="!foto">
+          <img id="cam" class="fcamara" [src]="foto" *ngIf="foto">
         </ion-label >
       </ion-item>
   
