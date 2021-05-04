@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Storage} from '@ionic/storage';
+import { Receta } from 'src/app/services/shared/receta';
+import { RecetaService } from 'src/app/services/shared/receta.service';
 
 @Component({
   selector: 'app-recetas-guardadas',
@@ -7,8 +9,8 @@ import {Storage} from '@ionic/storage';
   styleUrls: ['./recetas-guardadas.page.scss'],
 })
 export class RecetasGuardadasPage implements OnInit {
-
-  constructor( private storage:Storage) {
+  Recetas = [];
+  constructor( private storage:Storage,private aptService: RecetaService) {
     this.storage.get('temaOscuro').then((result)=>{
       if(result=== true){
         document.body.setAttribute('color-theme','dark');
@@ -21,7 +23,39 @@ export class RecetasGuardadasPage implements OnInit {
     });
    }
 
-  ngOnInit() {
+   ngOnInit() {
+    this.fetchBookings();
+    let bookingRes = this.aptService.getRecetaList();
+    bookingRes.snapshotChanges().subscribe(res => {
+      this.Recetas = [];
+      res.forEach(item => {
+        let a = item.payload.toJSON();
+        a['$key'] = item.key;
+        this.Recetas.push(a as Receta);
+      })
+    })
+  }
+
+  fetchBookings() {
+    this.aptService.getRecetaList().valueChanges().subscribe(res => {
+      console.log(res)
+    })
+  }
+
+  
+  deleteReceta(id) {
+    console.log(id)
+    if (window.confirm('Do you really want to delete?')) {
+      this.aptService.deleteReceta(id)
+    }
   }
 
 }
+
+
+
+  
+
+ 
+
+

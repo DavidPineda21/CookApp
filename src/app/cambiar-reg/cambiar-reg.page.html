@@ -7,32 +7,20 @@
 </ion-header>
 
 <ion-content>
-  <div  id="contenedor-cajones"[fullscreen]="true" class="ion-padding">
-    <ion-item class="cajones">
-      <ion-label class="titulo">Nombre: </ion-label>
-      <ion-input class="input"  placeholder="placeholder" type="text"></ion-input>
-    </ion-item>
-  
-    <ion-item class="cajones">
-      <ion-label class="titulo">Apellido: </ion-label>
-      <ion-input class="input"  placeholder="placeholder" type="text"></ion-input>
-    </ion-item>
-  
-    <ion-item class="cajones">
-      <ion-label class="titulo">contraseña: </ion-label>
-      <ion-input class="input"  placeholder="placeholder" type="password"></ion-input>
-    </ion-item>
-  
-    <ion-item class="cajones">
-      <ion-label class="titulo">Confirme contraseña: </ion-label>
-      <ion-input class="input"  placeholder="placeholder" type="password"></ion-input>
-    </ion-item>
-  
-    <ion-button id="btnSalir"  expand="block" shape="round" >
-      Guardar
-      <ion-icon name="checkmark-outline"slot="start"></ion-icon> 
-    </ion-button>
-  </div>
+  <ion-card>
+    <ion-card-header>
+      <img class="imgs" src="assets/Integrantes.png"> 
+      <ion-card-title>CookApp</ion-card-title>
+    </ion-card-header>
+    <ion-card-subtitle>Integrante</ion-card-subtitle>
+    <ion-card-content>
+      <ul class="ingredientes">
+        <li>Juan Camilo Giraldo Cespedes</li>
+        <li>Juan Camilo Giraldo Cespedes</li>
+        <li>Juan Camilo Giraldo Cespedes</li>
+      </ul>
+    </ion-card-content>
+  </ion-card>
   
 
 </ion-content>

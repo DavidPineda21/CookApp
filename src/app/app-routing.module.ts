@@ -38,10 +38,12 @@ const routes: Routes = [
     loadChildren: () => import('./registrarse/registrarse.module').then( m => m.RegistrarsePageModule)
   },
 
+
 ];
 
 
-  
+
+
 
 
 

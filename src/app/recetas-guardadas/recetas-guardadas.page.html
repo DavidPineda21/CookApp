@@ -2,43 +2,37 @@
 <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 <ion-header>
   <ion-toolbar>
-    <img src="assets/atras.svg"> 
     <img class="logo" src="assets/logo.svg">
   </ion-toolbar>
 </ion-header>
 
-<ion-content class="background" [fullscreen]="true">
-  <p class="titulo2">Recetas Guardadas</p>
-  <ion-card>
-    <ion-card-header>
-      <img class="imgs" src="assets/sanduche.jpg"> 
-      <ion-card-title>SANDUCHE</ion-card-title>
-    </ion-card-header>
-    <ion-card-subtitle>Ingredientes</ion-card-subtitle>
-    <ion-card-content>
-      <ul class="ingredientes">
-        <li>1 taza de avena en copos </li>
-        <li>1 plátano mediano-grande, maduro </li> 
-        <li>2-3 cucharadas de pepitas de chocolate puro</li> 
-        <li>10-12 avellanas</li> 
-      </ul>
-    </ion-card-content>
-  </ion-card>
+<ion-content class="background">
+  <ion-list class="ios list-ios hydrated">
+    <ion-list-header class="ios hydrated">
+      Recetas
+    </ion-list-header>
 
-  <ion-card>
-    <ion-card-header>
-      <img class="imgs" src="assets/ceviche.jpg"> 
-      <ion-card-title>CEVICHE</ion-card-title>
-    </ion-card-header>
-    <ion-card-subtitle>Ingredientes</ion-card-subtitle>
-    <ion-card-content>
-      <ul class="ingredientes">
-        <li>1 taza de avena en copos </li>
-        <li>1 plátano mediano-grande, maduro </li> 
-        <li>2-3 cucharadas de pepitas de chocolate puro</li> 
-        <li>10-12 avellanas</li> 
-      </ul>
-    </ion-card-content>
-  </ion-card>
-  
+    <ion-item *ngFor="let receta of Recetas" class="user-list">
+      
+      <ion-card>
+        <ion-card-header>
+          <img class="imgs" src="assets/sanduche.jpg"> 
+          <ion-card-title>{{receta.Titulo}}</ion-card-title> 
+        </ion-card-header>
+        <ion-card-content>
+          <ul class="ingredientes">
+            <li>{{receta.Ingredientes}}</li>
+            <li>{{receta.Proceso}} </li> 
+            <li>{{receta.Tiempo}}</li> 
+          </ul>
+        </ion-card-content>
+      </ion-card>
+
+      <div class="item-note" item-end>
+        <button ion-button clear (click)="deleteReceta(receta.$key)">
+          <ion-icon name="trash" style="zoom:2.0"></ion-icon>
+        </button>
+      </div>
+    </ion-item>
+  </ion-list>
 </ion-content>

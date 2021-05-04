@@ -6,15 +6,7 @@ ion-toolbar{
        
     }
 
-    ion-button{
-        --background: rgba(255, 116, 38, 0.56);
-        font-family: 'Pacifico', cursive;
-        letter-spacing: -0.333333px;
-        color: rgba(254, 243, 243, 0.83);
-        border: 1px solid #000000;
-        box-sizing: border-box;
-        border-radius: 30px
-    }
+    
 }
 
 
@@ -82,6 +74,16 @@ ion-list{
         color: #000000;
         font-family: 'Pacifico', cursive;
         
+    }
+
+    ion-button{
+        --background: rgba(255, 116, 38, 0.56);
+        font-family: 'Pacifico', cursive;
+        letter-spacing: -0.333333px;
+        color: rgba(254, 243, 243, 0.83);
+        border: 1px solid #000000;
+        box-sizing: border-box;
+        border-radius: 30px
     }
 
 }

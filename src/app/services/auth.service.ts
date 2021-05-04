@@ -5,7 +5,6 @@ import firebase from 'firebase';
 import { AngularFirestore, AngularFirestoreDocument} from '@angular/fire/firestore';
 import { Observable, of } from 'rxjs';
 import{ switchMap} from 'rxjs/operators';
-import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root',
@@ -14,7 +13,7 @@ export class AuthService {
 
   public user$:Observable<User>;
 
-  constructor(private afAuth:AngularFireAuth, private afs:AngularFirestore, private router:Router) { 
+  constructor(private afAuth:AngularFireAuth, private afs:AngularFirestore,public firestore: AngularFirestore) { 
     this.user$= this.afAuth.authState.pipe(
       switchMap((user)=>{
       if(user){
@@ -24,6 +23,8 @@ export class AuthService {
     })
     );
   }
+
+
 
 
   async loginGoogle(): Promise<User>{
@@ -92,4 +93,7 @@ export class AuthService {
     };
     return userRef.set(data, { merge:true});
   }
-}
+  
+
+ }
+

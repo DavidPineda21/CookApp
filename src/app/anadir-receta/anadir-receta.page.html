@@ -2,21 +2,17 @@
 <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 <ion-header>
   <ion-toolbar>
-    <img src="assets/atras.svg"> 
     <img class="logo" src="assets/logo.svg">
-    <ion-buttons slot="end">
-      <ion-button id="guardar" onclick = "anadir_card()" expand="block" shape="round" >Guardar</ion-button>
-    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="background" [fullscreen]="true">
   <ion-list lines="full" class="ion-no-margin">
-    <form id="form">
+    <form id="form" [formGroup]="CrearReceta" (ngSubmit)="formSubmit()" >
     
       <ion-item class="cajon_img">
         <ion-label id="label" class="label_img"  >
-          <img id="cam" class="fcamara" (click) = "tomarfoto()" [src]="img" *ngIf="!foto">
+          <img  id="cam" class="fcamara" (click) = "tomarfoto()" [src]="img" *ngIf="!foto">
           <img id="cam" class="fcamara" [src]="foto" *ngIf="foto">
         </ion-label >
       </ion-item>
@@ -24,25 +20,29 @@
       <ion-item class="cajones">
         <ion-label position="stacked" id = "titulo" class="titulo">Título
         </ion-label>
-        <ion-input  id="titulo" class="input" placeholder="placeholder"></ion-input>
+        <ion-input formControlName="Titulo" id="titulo" class="input" placeholder="placeholder"></ion-input>
       </ion-item>
   
       <ion-item class="cajones">
         <ion-label position="stacked" class="titulo">Ingredientes 
         </ion-label>
-        <ion-textarea id="ingredientes" placeholder="placeholder"></ion-textarea>
+        <ion-textarea  formControlName="Ingredientes" id="ingredientes" placeholder="placeholder"></ion-textarea>
       </ion-item>
   
       <ion-item class="cajones">
         <ion-label position="stacked" class="titulo">Proceso 
         </ion-label>
-        <ion-textarea placeholder="placeholder"></ion-textarea>
+        <ion-textarea formControlName="Proceso" placeholder="placeholder"></ion-textarea>
       </ion-item>
   
       <ion-item class="cajones">
         <ion-label class="titulo">Tiempo de ejecución: </ion-label>
-        <ion-input class="input"  placeholder="placeholder" type="text"></ion-input>
+        <ion-input class="input" formControlName="Tiempo"  placeholder="placeholder" type="text"></ion-input>
       </ion-item>
+
+      <ion-buttons slot="end">
+        <ion-button type="submit" id="guardar" expand="block" shape="round" >Guardar</ion-button>
+      </ion-buttons>
       
     </form>
   </ion-list>
