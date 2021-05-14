@@ -13,15 +13,16 @@ ion-content.background{
 }
 
 ion-card{
-    background: white;
-    border: 1px solid #000000;
+    background: none;
+    border: 1px solid #ffffff;
     box-sizing: border-box;
     border-radius: 35px;
-    width: 80%;
+    width: 950%;
     height: 40%;
 }
 
 .titulo{
+    margin-top: 5px;
     text-align: center;
     display: block;
     color: white;
@@ -46,8 +47,22 @@ ion-card-subtitle{
 }
 
 .ingredientes{
-   text-size-adjust: 10px;
-   color: black;
+   list-style: none;
+   margin-bottom: 8px;
+   position: left;
+   color: white;
    font-family: 'cursive';
-   font-size: 10px;
+   font-size: 15px;
+}
+
+.titulo-card{
+    margin-top: 8px;
+    color: white;
+}
+
+.ingre{
+    margin-top: 100px;
+    font-style: 'cursive';
+    color: rgb(138, 130, 130);
+    font-size: 15px;
 }
