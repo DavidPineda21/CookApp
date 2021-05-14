@@ -4,6 +4,8 @@ import { RegistrarsePage } from '../registrarse/registrarse.page';
 import {Storage} from '@ionic/storage';
 import {Router} from '@angular/router';
 import { AuthService } from '../services/auth.service';
+import { AlertController } from '@ionic/angular';
+import { empty, EmptyError } from 'rxjs';
 
 @Component({
   selector: 'app-sesion',
@@ -12,7 +14,7 @@ import { AuthService } from '../services/auth.service';
 })
 export class SesionPage implements OnInit {
 
-  constructor(private router:Router, public popoverController:PopoverController,private storage:Storage, private authSvc:AuthService) {
+  constructor(public alertController: AlertController, private router:Router, public popoverController:PopoverController,private storage:Storage, private authSvc:AuthService) {
     this.storage.get('temaOscuro').then((result)=>{
       if(result=== true){
         document.body.setAttribute('color-theme','dark');
@@ -28,7 +30,32 @@ export class SesionPage implements OnInit {
      
    }
 
+  /* async campos_vacios() {
+     const user = document.getElementById('user')
+     const clave = document.getElementById('clave')
+     if(user clave.empty){
+      const alert = await this.alertController.create({
+        cssClass: 'Importante',
+        header: 'AVISO',
+        message: 'Ingresa usuario y contraseña para ingresar',
+        buttons: ['OK']
+      });
+     }
+   }*/
+   async alert() {
+    const alert = await this.alertController.create({
+      cssClass: 'Importante',
+      header: 'IMPORTANTE',
+      subHeader: 'Confirmacíon de usuario',
+      message: 'Al correo te enviamos un mensaje para poder iniciar sesión. \n Recuerdo activar lo primero',
+      buttons: ['OK']
+    });
+
+    await alert.present();
+  }
+
   async abrirPopover(ev: any ){
+    this.alert()
     const popover = await this.popoverController.create({
       component: RegistrarsePage,
       cssClass: 'pepe',
