@@ -81,8 +81,8 @@ export class SesionPage implements OnInit {
         const verificado= this.authSvc.estaEmailVerificado(user);
         this.redireccionDeUsuario(verificado);
       }
-    }catch(error){
-      console.log('Error', error);
+    }catch{
+      this.alert()
 
     }
 
