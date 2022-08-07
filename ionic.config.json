@@ -1,5 +1,8 @@
 {
   "name": "CookApp",
-  "integrations": {},
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
   "type": "angular"
 }

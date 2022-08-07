@@ -1,0 +1,45 @@
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<ion-header>
+  <ion-toolbar>
+    <img [routerLink]="['/anadir-receta']" class="btn-bk" src="assets/atras.svg"> 
+    <img class="logo" src="assets/logo.svg">
+   
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="background" [fullscreen]="true">
+  <ion-item  color="transparent" lines="none" >
+    <ion-label class="titulo">Iniciar Sesión</ion-label>
+  </ion-item>
+
+  <div  id="contenedor-cajones"[fullscreen]="true" class="ion-padding">
+
+    <ion-item  id="cj1" color="transparent"  lines="none">
+      <ion-icon src="assets/user.svg" slot="start"></ion-icon>
+      <ion-input id="user" #email required type="text" class="input" placeholder="Usuario">
+      </ion-input>
+    </ion-item>
+
+    <ion-item id="cj2" color="transparent"class="cajones" lines="none">
+      <ion-icon src="assets/key.svg" slot="start"></ion-icon>
+      <ion-input  id="clave" type="password" #password required class="input" placeholder="Contraseña">
+      </ion-input>
+    </ion-item>
+
+    <ion-item id="cj3" color="transparent" class="cajones" lines="none">
+      <ion-icon  slot="start" src="assets/icon-google.svg"></ion-icon>
+      <ion-label (click)="Google(email,password)" class="text-google">
+        Ingresar con Google
+      </ion-label>
+    </ion-item>
+
+    <ion-button id="btn" (click)= "sesion(email,password)" expand="block" shape="round" >
+      Ingresar
+      <ion-icon name="login"slot="start"></ion-icon> 
+    </ion-button>
+
+    <ion-label id="rg" (click)="abrirPopover()">¿Quieres registrarte?</ion-label> 
+  </div>
+
+</ion-content>

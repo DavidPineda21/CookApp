@@ -1,0 +1,55 @@
+ion-title{
+    text-align: center;
+}
+
+.cajones{
+   
+    background-color: rgba(255, 255, 255, 0.829); 
+    border-radius: 20px;
+    margin-bottom: 26px;
+    box-shadow: 0 10px 30px 0px rgba(199, 182, 30, 0.479);
+   
+}
+
+ion-content.background{
+    --background: url(../../assets/fondo-inicio.jpg) 0 0/100% 100% no-repeat;
+}
+
+ion-card{
+    background: white;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    border-radius: 35px;
+   
+}
+
+.titulo{
+    text-align: center;
+    display: block;
+    color: black;
+    font-family: 'TimeNewRoman', cursive;
+    font-size: 25px;
+    text-decoration: underline;
+}
+
+ion-card-title{
+ font-family: 'Pacifico';
+}
+
+ion-card-subtitle{
+   color: black;
+   font-family: cursivew;
+}
+
+.imgs{
+ width: 350px;
+ height: 230px;
+ border-radius: 30px;
+}
+
+.ingredientes{
+   list-style: none;
+   font-size: 15px;
+   color: black;
+}
+

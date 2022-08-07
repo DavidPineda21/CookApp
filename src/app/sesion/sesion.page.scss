@@ -1,0 +1,99 @@
+ion-toolbar{
+            
+    .btn-bk{
+        width: 15%;
+        height: 5%;
+    }
+    .logo{
+        margin-top: 3%;
+        margin-left: 0%;
+        width: 30%;
+        height: 0%;
+    }
+}
+
+ion-content.background{
+    --background: url(../../assets/fondo-ins.jpg) 0 0/100% 100% no-repeat;
+}
+
+
+
+.titulo{
+
+    max-width: 100%;
+    max-height: 100%;
+    margin-top: 45px;
+    margin-bottom: -10px;
+    font-size: 30px;
+    color: white;
+    text-align: center;
+    font-family: Pacifico;
+}
+
+.input[type="text"]{
+    color: white;
+    border-bottom: 3px solid white;
+    padding: 12px 40px;
+    text-align: center;
+    font-family: Pacifico;
+}
+
+
+.input[type="password"]{
+    
+    color: white;
+    border-bottom: 3px solid white;
+    padding: 12px 40px;
+    text-align: center;
+    font-family: Pacifico;
+}
+
+.text-google{
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration: underline;
+    margin-top: 5vw;
+    font-family: 'Pacifico';
+    
+}
+ion-button{
+
+    --background:  rgba(239, 240, 242, 0.56);
+    margin-top: 30px;
+    text-align: left;
+    font-family: cursive;
+    color: white;
+    position: relative;
+}
+
+
+#cj1{
+    margin-top:10px ;
+    margin-left: 0px;
+    margin-right: 20px;
+}
+
+#cj2{
+    margin-top:5px ;
+    margin-left: 0px;
+    margin-right: 20px;
+}
+
+#cj3{
+    margin-top:1px ;
+}
+
+
+#rg{
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration: underline;
+    margin-top: 5vw;
+    margin-bottom: 0%;
+}
+
+#btn{
+    margin-top: 30px;
+}

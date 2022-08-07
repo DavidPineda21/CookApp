@@ -1,0 +1,42 @@
+ion-toolbar{
+            
+  
+    .logo{
+        margin-top: 3%;
+        margin-left: 0%;
+        width: 30%;
+        height: 0%;
+    }
+}
+
+ion-content.background{
+    --background: url(../../assets/fondo.svg) 0 0/100% 100% no-repeat;
+}
+
+ion-card{
+    background: rgba(170, 179, 177, 0.199);
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    border-radius: 35px;
+    
+}
+
+ion-card-title{
+    font-family: 'Pacifico';
+    margin-left: 20%;
+
+}
+
+.imgs{
+    width: 350px;
+    height: 230px;
+    border-radius: 30px;
+}
+
+.ingredientes{
+    text-size-adjust: 20px;
+    color: black;
+    font-family: 'Pacifico';
+    font-size: 10px;
+}
+

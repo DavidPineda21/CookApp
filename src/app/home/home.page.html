@@ -1,20 +1,90 @@
-<ion-header [translucent]="true">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<ion-header>
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+    <img class="logo" src="assets/logo.svg">
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="background" [fullscreen]="true">
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+   <ion-item  color="transparent" lines="none" >
+      <ion-label class="titulo">Recetas CookApp</ion-label>
+    </ion-item>
+
+  <ion-slides pager="true" [options]="slideOpts">
+        <ion-slide>
+          <ion-card>
+            <ion-card-header>
+              <img class="imgs" src="assets/hambu.jpg"> 
+              <ion-card-title class="titulo-card">HAMBURGUESA</ion-card-title>
+            </ion-card-header>
+            <ion-card-subtitle class="ingredientes">PREPARACIÓN</ion-card-subtitle>
+            <ion-card-content>
+              <p class="ingredientes">En un bol mezclamos los ingredientes de las hamburguesas caseras. Los huevos, 
+                les darán un toque de cremosidad extra mientras que el pan rallado que, 
+                como ves es poca cantidad para que mantengan dicha cremosidad, darán un toquecito de crujir. 
+                El ajo y la cebolla, las pocho previamente, para que no tenga un sabor demasiado salvaje aunque, 
+                si lo prefieres, 
+                puedes añadirlo en crudo. Mezclamos con las manos limpias</p>
+                <ion-subtitle class="ingre">Ingredientes</ion-subtitle>
+              <ou class="ingredientes">
+                <li>1 taza de avena en copos </li>
+                <li>1 plátano mediano-grande, maduro </li> 
+                <li>2-3 cucharadas de pepitas de chocolate puro</li> 
+                <li>10-12 avellanas</li> 
+              </ou>
+            </ion-card-content>
+          </ion-card>
+        </ion-slide>
+        <ion-slide>
+          <ion-card>
+            <ion-card-header>
+              <img class="imgs" src="assets/ceviche.jpg"> 
+              <ion-card-title class="titulo-card">CEVICHE</ion-card-title>
+            </ion-card-header>
+            <ion-card-subtitle class="ingredientes">PREPARACIÓN</ion-card-subtitle>
+            <ion-card-content>
+              <p class="ingredientes">En un bol mezclamos los ingredientes de las hamburguesas caseras. Los huevos, 
+                les darán un toque de cremosidad extra mientras que el pan rallado que, 
+                como ves es poca cantidad para que mantengan dicha cremosidad, darán un toquecito de crujir. 
+                El ajo y la cebolla, las pocho previamente, para que no tenga un sabor demasiado salvaje aunque, 
+                si lo prefieres, 
+                puedes añadirlo en crudo. Mezclamos con las manos limpias</p>
+                <ion-subtitle class="ingre">Ingredientes</ion-subtitle>
+              <ou class="ingredientes">
+                <li>1 taza de avena en copos </li>
+                <li>1 plátano mediano-grande, maduro </li> 
+                <li>2-3 cucharadas de pepitas de chocolate puro</li> 
+                <li>10-12 avellanas</li> 
+              </ou>
+            </ion-card-content>
+          </ion-card>
+        </ion-slide>
+        <ion-slide>
+          <ion-card>
+            <ion-card-header>
+              <img class="imgs" src="assets/postre.jpg"> 
+              <ion-card-title class="titulo-card">POSTRE DE FRESAS</ion-card-title>
+            </ion-card-header>
+            <ion-card-subtitle class="ingredientes">PREPARACIÓN</ion-card-subtitle>
+            <ion-card-content>
+              <p class="ingredientes"> En un bol mezclamos los ingredientes de las hamburguesas caseras. Los huevos, 
+                les darán un toque de cremosidad extra mientras que el pan rallado que, 
+                como ves es poca cantidad para que mantengan dicha cremosidad, darán un toquecito de crujir. 
+                El ajo y la cebolla, las pocho previamente, para que no tenga un sabor demasiado salvaje aunque, 
+                si lo prefieres, 
+                puedes añadirlo en crudo. Mezclamos con las manos limpias</p>
+                <ion-subtitle class="ingre">Ingredientes</ion-subtitle>
+              <ou class="ingredientes">
+                <li>1 taza de avena en copos </li>
+                <li>1 plátano mediano-grande, maduro </li> 
+                <li>2-3 cucharadas de pepitas de chocolate puro</li> 
+                <li>10-12 avellanas</li> 
+              </ou>
+            </ion-card-content>
+          </ion-card>
+        </ion-slide>
+  </ion-slides>
+
 </ion-content>

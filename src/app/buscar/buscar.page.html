@@ -1,0 +1,31 @@
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<ion-header>
+  <ion-toolbar>
+    <img class="logo" src="assets/logo.svg">
+  </ion-toolbar>
+</ion-header>
+  
+<ion-content class="background" [fullscreen]="true">
+
+  <ion-searchbar autocomplete="on" debounce="800" animated [(ngModel)]="searchModel" (ionClear)="videos =[]" (ionChange)="search()" >
+  </ion-searchbar>
+
+  <ion-List>
+    <ion-list-header>
+      Recientes busquedas
+    </ion-list-header>
+    
+    <ion-item *ngFor="let video of videos">
+      <ion-avatar slot="start" (click)="streamVideo(video.id.videoId)">
+        <img [src]="video.snippet.thumbnails.high.url">
+      </ion-avatar>
+      <ion-label>
+        <h2>{{video.snippet.title}}</h2>
+      </ion-label>
+  
+    </ion-item>
+  </ion-List>
+    
+</ion-content>

@@ -1,0 +1,91 @@
+ion-col {
+    padding: 0;
+}
+
+.logo{
+    margin-top: 3%;
+    width: 30%;
+   
+}
+
+
+ion-content.background{
+    --background: url(../../assets/fondo_cuenta.jpg) 0 0/100% 100% no-repeat;
+}
+
+
+.circulo{
+
+    --background: linear-gradient(143.58deg, #c93b3b2d 21.23%, rgba(48, 41, 41, 0) 129.67%);
+
+    width: 100px;
+     height: 100px;
+     display: block;
+     margin:auto;
+     margin-top: 15px;
+     -moz-border-radius: 50%;
+     -webkit-border-radius: 50%;
+     border-radius: 50%;
+     background:linear-gradient(143.58deg, #C93B3B 21.23%, rgba(48, 41, 41, 0) 129.67%);
+
+}
+
+.imagen{
+    width: 200px;
+    height: 72.5px;
+    margin-top: 15px;
+}
+
+
+#contenedor-cajones{
+
+    margin-top: 50px;
+
+
+}
+.cajones {
+
+    
+    
+    border-radius: 15px;
+    box-shadow: 0px 3px 45px 0px rgba(163, 20, 20, 0.493);
+
+    ion-icon:first-of-type {
+        background: #ed576b;
+        color: #FFFFFF;
+        padding: 4px;
+        border-radius: 12px;
+    }
+
+    ion-label{
+        color: #000000;
+    font-family: 'Pacifico', cursive;
+    }
+
+}
+
+#cj2{
+    margin-top: -20px;
+}
+#cj3{
+    margin-top:10px ;
+}
+
+ion-button{
+
+    --background: linear-gradient(134.1deg, rgba(38, 34, 39, 0.56) 14.37%, rgba(214, 78, 69, 0.460833) 75.91%, rgba(38, 34, 39, 0) 118.93%);
+    color: #000000;
+    font-family: 'Pacifico', cursive;
+    letter-spacing: -0.333333px;
+    color: rgba(254, 243, 243, 0.83);
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    border-radius: 30px
+
+}
+
+#btnSalir{
+    margin-top: 30px;
+}
+
+
